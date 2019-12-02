@@ -27,7 +27,7 @@ end
 # using director_data as input
 def gross_for_director(director_data)
   director_gross = 0
-  director_index = directors_database.each { |director| return directors_database.index if directors_database[director][:name] == director_data }
+  director_index =
   movie_index = 0
   while movie_index < directors_database[director_index][:movies].count do
     director_gross += directors_database[director_index][:movies][movie_index][:worldwide_gross]
