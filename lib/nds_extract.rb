@@ -23,16 +23,15 @@ def directors_totals(nds)
     result
 end
 
-require 'pry'
+# require 'pry'
 # Find a way to accumulate the :worldwide_grosses and return that Integer
 # using director_data as input
 def gross_for_director(director_data)
-  binding.pry
+  # binding.pry
   director_gross = 0
-  director_index =
   movie_index = 0
-  while movie_index < directors_database[director_index][:movies].count do
-    director_gross += directors_database[director_index][:movies][movie_index][:worldwide_gross]
+  while movie_index < director_data[:movies].count do
+    director_gross += director_data[:movies][movie_index][:worldwide_gross]
     movie_index += 1
   end
   director_gross
